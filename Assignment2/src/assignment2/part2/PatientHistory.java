@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -71,30 +72,32 @@ public class PatientHistory {
         float weightP = sc.nextFloat();
 
 
-        VitalSigns vs = history.addNewVitals();
+        VitalSigns vs = history.newVitalSign();
         vs.setHeartRate(heartRate);
         vs.setRespiratoryRate(respRate);
         vs.setSystolicBloodPressure(sysBP);
         vs.setWeightKG(weightKg);
         vs.setWeightPounds(weightP);
+        vs.setCreatedDate(new Date());
         displayOptions();
     }
 
     public static void viewVitals() {
         System.out.println("The Vital record history for the patient " + paitentName);
-        System.out.println("********************************************************************************************");
-        System.out.println("No. | Patient Name |     Heart Rate |   Resp Rate  |  Sys Rate | Weight(KG) |  Weight(Pounds)");
-        System.out.println("*********************************************************************************************");
+        System.out.println("****************************************************************************************************************************");
+        System.out.println("No. | Patient Name   |    Respiratory Rate |   Heart Rate  |  Sys Rate | Weight(KG) |  Weight(Pounds)   |   Created date");
+        System.out.println("****************************************************************************************************************************");
 
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < history.getList().size(); i++) {
             System.out.print(i + 1 + "     ");
-            System.out.print(paitentName + "                ");
-            System.out.print(history.getList().get(i).getRespiratoryRate() + "       ");
-            System.out.print(history.getList().get(i).getHeartRate() + "             ");
+            System.out.print(paitentName + "             ");
+            System.out.print(history.getList().get(i).getRespiratoryRate() + "               ");
+            System.out.print(history.getList().get(i).getHeartRate() + "                    ");
             System.out.print(history.getList().get(i).getSystolicBloodPressure() + "        ");
             System.out.print(history.getList().get(i).getWeightKG() + "           ");
-            System.out.print(history.getList().get(i).getWeightPounds() + "         ");
+            System.out.print(history.getList().get(i).getWeightPounds() + "       ");
+            System.out.print(history.getList().get(i).getCreatedDate()+ "         ");
             System.out.println();
         }
         displayOptions();

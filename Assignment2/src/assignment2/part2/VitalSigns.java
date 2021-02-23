@@ -5,6 +5,8 @@
  */
 package assignment2.part2;
 
+import java.util.Date;
+
 /**
  *
  * @author psribt
@@ -141,6 +143,15 @@ public class VitalSigns {
     int systolicBloodPressure;
     float weightKG;
     float weightPounds;
+    Date createdDate;
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
 
     public int getRespiratoryRate() {
         return respiratoryRate;

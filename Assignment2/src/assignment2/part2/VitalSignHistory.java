@@ -28,7 +28,7 @@ public class VitalSignHistory {
         this.history = history;
     }
 
-    public VitalSigns addNewVitals() {
+    public VitalSigns newVitalSign() {
         VitalSigns newVitals = new VitalSigns();
         history.add(newVitals);
         return newVitals;
