@@ -10,6 +10,9 @@ import static assignment2.part1.Patient.ageCalculate;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -30,7 +33,8 @@ public class PatientHistory {
     private static int age;
     static int ageGroup = -1;
     private static boolean flag = false;
-
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+   
    
     PatientHistory(String pname) {
         this.paitentName = pname;
@@ -78,7 +82,7 @@ public class PatientHistory {
         vs.setSystolicBloodPressure(sysBP);
         vs.setWeightKG(weightKg);
         vs.setWeightPounds(weightP);
-        vs.setCreatedDate(new Date());
+        vs.setCreatedDate(LocalDateTime.now());
         displayOptions();
     }
 
@@ -97,7 +101,7 @@ public class PatientHistory {
             System.out.print(history.getList().get(i).getSystolicBloodPressure() + "        ");
             System.out.print(history.getList().get(i).getWeightKG() + "           ");
             System.out.print(history.getList().get(i).getWeightPounds() + "       ");
-            System.out.print(history.getList().get(i).getCreatedDate()+ "         ");
+            System.out.print(history.getList().get(i).getCreatedDate().format(formatter)+ "         ");
             System.out.println();
         }
         displayOptions();

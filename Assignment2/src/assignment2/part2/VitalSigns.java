@@ -5,6 +5,7 @@
  */
 package assignment2.part2;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -143,13 +144,13 @@ public class VitalSigns {
     int systolicBloodPressure;
     float weightKG;
     float weightPounds;
-    Date createdDate;
+    LocalDateTime createdDate;
 
-    public Date getCreatedDate() {
+    public LocalDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
     }
 
