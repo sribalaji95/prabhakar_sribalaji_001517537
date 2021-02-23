@@ -83,7 +83,7 @@ public class PatientHistory {
     }
 
     public static void viewVitals() {
-        System.out.println("The Vital record history for the patient " + paitentName);
+        System.out.println("The Vital record history for the patient: " + paitentName);
         System.out.println("****************************************************************************************************************************");
         System.out.println("No. | Patient Name   |    Respiratory Rate |   Heart Rate  |  Sys Rate | Weight(KG) |  Weight(Pounds)   |   Created date");
         System.out.println("****************************************************************************************************************************");
@@ -145,12 +145,12 @@ public class PatientHistory {
                     if(set.contains(s1)){
 
                     if (isThisVitalSignNormal(s1)) {
-                        System.out.println("The attribute is within the range for this patient");
+                        System.out.println("The "+s1 +"is within the range for this patient");
                     } else {
-                        System.out.println("The attribute is Abnormal");
+                        System.out.println("The "+s1 +"is Abnormal");
                     }
                     }else{
-                        System.out.println("Attribute not found in the record");
+                        System.out.println("GIven attribute not found in the record");
                         System.out.println("Please Check for valid vital sign given below");
                         viewVitals();
 

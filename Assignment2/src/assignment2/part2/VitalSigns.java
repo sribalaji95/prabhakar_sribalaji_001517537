@@ -20,10 +20,10 @@ public class VitalSigns {
     private int heartRateLowerBound;
     private int sysBloodPressureLB;
     private int sysBloodPressureUB;
-    private int weightKgLB;
-    private int weightKgUB;
-    private int weightPLB;
-    private int weightPUB;
+    private float weightKgLB;
+    private float weightKgUB;
+    private float weightPLB;
+    private float weightPUB;
 
     public int getRespiratoryRateUpperBound() {
         return respiratoryRateUpperBound;
@@ -79,7 +79,7 @@ public class VitalSigns {
             this.sysBloodPressureUB = 70;
             this.weightKgLB = 2;
             this.weightKgUB = 3;
-            this.weightPLB = 4; // Change this to double
+            this.weightPLB = 4.5f; 
             this.weightPUB = 7;
         } else if (age == 2) {
             this.respiratoryRateLowerBound = 20;
@@ -90,7 +90,7 @@ public class VitalSigns {
             this.sysBloodPressureUB = 100;
             this.weightKgLB = 4;
             this.weightKgUB = 10;
-            this.weightPLB = 9; // Change this to double
+            this.weightPLB = 9; 
             this.weightPUB = 22;
         } else if (age == 3) {
             this.respiratoryRateLowerBound = 20;
@@ -101,7 +101,7 @@ public class VitalSigns {
             this.sysBloodPressureUB = 110;
             this.weightKgLB = 10;
             this.weightKgUB = 14;
-            this.weightPLB = 22; // Change this to double
+            this.weightPLB = 22;
             this.weightPUB = 31;
         } else if (age == 4) {
             this.respiratoryRateLowerBound = 20;

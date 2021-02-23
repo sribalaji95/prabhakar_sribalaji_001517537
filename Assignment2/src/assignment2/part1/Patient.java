@@ -125,11 +125,11 @@ public class Patient {
             ageGroup = ageCalculate(ageGroup);
         }
 
-        System.out.println("Respi Rate");
+        System.out.println("Respiratory Rate");
         int respRate = sc.nextInt();
         System.out.println("Heart Rate");
         int heartRate = sc.nextInt();
-        System.out.println("Syst BP");
+        System.out.println("Systolic Blood Pressure");
         int sysBP = sc.nextInt();
         System.out.println("Weight in KG");
         float weightKg = sc.nextFloat();
