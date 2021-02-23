@@ -5,8 +5,8 @@
  */
 package assignment2.part2;
 
-import assignment2.Patient;
-import static assignment2.Patient.ageCalculate;
+import assignment2.part1.Patient;
+import static assignment2.part1.Patient.ageCalculate;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

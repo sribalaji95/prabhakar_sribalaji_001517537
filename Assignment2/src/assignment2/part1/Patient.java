@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment2;
+package assignment2.part1;
 
 import assignment2.part2.PatientHistory;
 import static assignment2.part2.PatientHistory.createVitals;

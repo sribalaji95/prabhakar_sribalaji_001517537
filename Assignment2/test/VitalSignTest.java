@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import assignment2.Patient;
+import assignment2.part1.Patient;
 import assignment2.part2.VitalSigns;
 import org.junit.After;
 import org.junit.AfterClass;
